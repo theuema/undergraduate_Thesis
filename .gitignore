@@ -4,6 +4,8 @@
 *.out
 *.gz
 *.toc
+*.blg
+*.bbl
 
 # Mac Stuff
 .DS_Store

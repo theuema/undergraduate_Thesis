@@ -15,22 +15,25 @@
 %\documentclass[a4paper]{article}
 
 \usepackage[english]{babel}
+\usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath,latexsym,amssymb,amsfonts}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{algorithmic,algorithm}
-\usepackage{mathpazo} % Palatino font
 \usepackage{cite}
 \usepackage{titlesec}
-
-% Packages needed?
-\usepackage{fancyhdr}
 \usepackage{a4wide}
 \usepackage{url}
-\usepackage{ifthen}
+
+% Packages needed?
+%\usepackage{algorithmic,algorithm}
+%\usepackage{amsmath,latexsym,amssymb,amsfonts}
+%\usepackage{mathpazo} % Palatino font
+%\usepackage{fancyhdr}
+%\usepackage{ifthen}
+%\usepackage[colorinlistoftodos]{todonotes}
 
 %----------------------------------------------------------------------------------------
 %	COMMANDS
@@ -53,20 +56,31 @@
 % Title Command
 \usepackage[export]{adjustbox}
 \newcommand{\titlesection}[1]{
-	\begin{minipage}[t]{0.4\textwidth} 
-		\begin{adjustbox}{valign=c}
-			\centering
-			\noindent\includegraphics[width=5cm]{#1}
-		\end{adjustbox}
-	\end{minipage}%\quad %for a bigger space between minipages
-	\begin{minipage}[t]{0.6\textwidth} 
+	\centering
+	\begin{minipage}[t]{0.75\textwidth}
 		\fontsize{15pt}{15pt}\selectfont
 		Graz University of Technology \\
 		\fontsize{11pt}{14pt}\selectfont
-		\textbf{IAIK\\ Institute for Applied Information Processing and Communications} \\
+		\textbf{IAIK\\ Institute for \\ Applied Information  Processing and Communications} \\
 		Inffeldgasse 16a \\
 		A-8010 Graz
-	\vspace{20pt}
+	\end{minipage}%\quad %for a bigger space between minipages
+	\begin{minipage}[t]{0.25\textwidth}
+		\begin{adjustbox}{valign=t}
+			\includegraphics[scale=1]{#1}
+		\end{adjustbox}
 	\end{minipage}
 	%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+}
+
+% Change Font Command
+% use either
+% ptm -> Times
+% ppl -> Palatino
+% pcr -> Courier
+\usepackage{times}
+\usepackage{palatino}
+\usepackage{courier}
+\newcommand{\ChangeFont}[1]{
+	\fontfamily{#1}\selectfont
 }

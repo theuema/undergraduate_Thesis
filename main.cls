@@ -26,7 +26,6 @@
 \usepackage{titlesec}
 \usepackage{a4wide}
 \usepackage{url}
-
 % Packages needed?
 %\usepackage{algorithmic,algorithm}
 %\usepackage{amsmath,latexsym,amssymb,amsfonts}

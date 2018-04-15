@@ -26,6 +26,10 @@
 \usepackage{titlesec}
 \usepackage{a4wide}
 \usepackage{url}
+\usepackage{spverbatim}
+\usepackage{listings}
+
+%\usepackage{float}
 % Packages needed?
 %\usepackage{algorithmic,algorithm}
 %\usepackage{amsmath,latexsym,amssymb,amsfonts}
